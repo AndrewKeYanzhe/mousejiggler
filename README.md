@@ -51,7 +51,7 @@ The only reason this exists is for those poor sods whose IT department makes it 
 Operation
 =========
 
-Simply run the MouseJiggle.exe included in the release .zip file. Check the "Jiggling?" checkbox to start jiggling the mouse pointer; uncheck it to stop. You can also press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> to toggle jiggling at any time. To enable you to use the computer normally even with jiggling enabled, jiggling is automatically paused when the mouse is moved, and resumes after a complete jiggle interval without mouse movement.
+Simply run the MouseJiggle.exe included in the release .zip file. Jiggling starts enabled, with the "Jiggling?" checkbox checked; uncheck it to stop and check it again to resume. You can also press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> to toggle jiggling at any time. To enable you to use the computer normally even with jiggling enabled, jiggling is automatically paused when the mouse is moved, and resumes after a complete jiggle interval without mouse movement.
 
 Check the "Settings..." checkbox to reveal the settings; these should be relatively self-explanatory. The jiggle mode dropdown allows you to select from different jiggling modes. These include:
 
@@ -71,7 +71,7 @@ Usage:
   MouseJiggler [options]
 
 Options:
-  -j, --jiggle               Start with jiggling enabled.
+  -j, --jiggle               Start with jiggling enabled. [default: True]
   -m, --minimized            Start minimized. [default: False]
   -o, --mode <mode>          Start with the specified jiggle mode (Normal, Zen, Circle, Linear). [default: Normal]
   -r, --random               Start with random timer enabled. [default: False]
@@ -84,7 +84,7 @@ Options:
   -?, -h, --help             Show help and usage information
 ```
 
-The `-j` command-line switch tells Mouse Jiggler to commence jiggling immediately on startup. Neither this nor '-g' are persistent.
+Jiggling is enabled on every launch by default. The `-j` command-line switch explicitly enables it; use `--jiggle=false` to start with jiggling disabled. Neither this nor '-g' are persistent.
 
 Scheduling a stop
 -----------------

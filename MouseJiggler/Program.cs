@@ -142,7 +142,7 @@ public static class Program
     var optJiggling = new Option<bool>("--jiggle", "-j")
     {
       Description = GetResourceString ("Program_OptJiggle_Description"),
-      DefaultValueFactory = _ => false
+      DefaultValueFactory = _ => true
     };
 
     // -m --minimized
